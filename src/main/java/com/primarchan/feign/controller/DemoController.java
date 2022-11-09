@@ -11,10 +11,16 @@ public class DemoController {
 
     private final DemoService demoService;
 
-    @GetMapping("/get") // -> url prefix + /get -> http://localhost:8080/target_server/get
+    @GetMapping("/get")
     public String getController() {
 
         return demoService.get();
+    }
+
+    @GetMapping("/post")
+    public String postController() {
+
+        return demoService.post();
     }
 
 }
